@@ -8,10 +8,10 @@ export default class Hover extends Component {
     styles: PropTypes.object
   }
 
-  render () {
+  render() {
     const { styles } = this.props.children.props
     return (
-      <div style={styles}>
+      <div style={Object.assign({ ...styles }, { zIndex: 1 })}>
         {this.props.children.props.children}
       </div>
     )
